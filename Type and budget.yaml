@@ -1,0 +1,73 @@
+name: SalesSemanticModel
+description: A semantic model for analyzing accounts and related sales data.
+
+tables:
+  - name: AccountType
+    description: List of Account Types (Premium, Platinum, Gold, Silver, Bronze).
+    base_table:
+      database: DEV_DB
+      schema: SALES
+      table: '"AccountType"'
+    dimensions:
+      - name: AccountTypeId
+        synonyms: [AccountTypeID, Account Type ID]
+        description: The unique identifier for each account type.
+        expr: '"AccountTypeId"'
+        data_type: NUMBER
+        unique: true
+      - name: AccountTypeName
+        synonyms: [Account Type Name]
+        description: The name of the account type.
+        expr: '"AccountTypeName"'
+        data_type: VARCHAR
+        unique: false
+
+  - name: Budget
+    description: Budgets for Expenses.
+    base_table:
+      database: DEV_DB
+      schema: SALES
+      table: '"Budget"'
+    dimensions:
+      - name: BudgetId
+        synonyms: [BudgetID]
+        description: The unique identifier for each budget.
+        expr: '"BudgetId"'
+        data_type: NUMBER
+        unique: true
+      - name: ChannelId
+        synonyms: [ChannelID]
+        description: The unique identifier for each channel.
+        expr: '"ChannelId"'
+        data_type: NUMBER
+        unique: false
+      - name: ExpenseAreaId
+        synonyms: [ExpenseAreaID]
+        description: The unique identifier for each expense area.
+        expr: '"ExpenseAreaId"'
+        data_type: NUMBER
+        unique: false
+      - name: ExpenseCategoryId
+        synonyms: [ExpenseCategoryID]
+        description: The unique identifier for each expense category.
+        expr: '"ExpenseCategoryId"'
+        data_type: NUMBER
+        unique: false
+      - name: CountryId
+        synonyms: [CountryID]
+        description: The unique identifier for each country.
+        expr: '"CountryId"'
+        data_type: NUMBER
+        unique: false
+      - name: MonthId
+        synonyms: [MonthID]
+        description: The month identifier.
+        expr: '"MonthId"'
+        data_type: VARCHAR
+        unique: false
+      - name: Amount
+        synonyms: [Amount]
+        description: Total Amount.
+        expr: '"Amount"'
+        data_type: NUMBER
+        unique: false
