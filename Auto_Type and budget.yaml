@@ -1,0 +1,89 @@
+name: Account_Type
+description: Contain meta data about Account and account type
+tables:
+- name: ACCOUNTTYPE
+  description: ''
+  base_table:
+    database: DEV_DB
+    schema: CORTEX_ANALYST_SALES_DATA
+    table: ACCOUNTTYPE
+  dimensions:
+  - name: ACCOUNTTYPEID
+    synonyms:
+    - ACCOUNTTYPEID
+    - Accounttypeid
+    description: ''
+    expr: ACCOUNTTYPEID
+    data_type: NUMBER
+    unique: false
+  - name: ACCOUNTTYPENAME
+    synonyms:
+    - ACCOUNTTYPENAME
+    - Accounttypename
+    description: ''
+    expr: ACCOUNTTYPENAME
+    data_type: VARCHAR
+    unique: false
+- name: BUDGET
+  description: ''
+  base_table:
+    database: DEV_DB
+    schema: CORTEX_ANALYST_SALES_DATA
+    table: BUDGET
+  dimensions:
+  - name: BUDGETID
+    synonyms:
+    - BUDGETID
+    - Budgetid
+    description: ''
+    expr: BUDGETID
+    data_type: NUMBER
+    unique: false
+  - name: CHANNELID
+    synonyms:
+    - CHANNELID
+    - Channelid
+    description: ''
+    expr: CHANNELID
+    data_type: NUMBER
+    unique: false
+  - name: EXPENSEAREAID
+    synonyms:
+    - EXPENSEAREAID
+    - Expenseareaid
+    description: ''
+    expr: EXPENSEAREAID
+    data_type: NUMBER
+    unique: false
+  - name: EXPENSECATEGORYID
+    synonyms:
+    - EXPENSECATEGORYID
+    - Expensecategoryid
+    description: ''
+    expr: EXPENSECATEGORYID
+    data_type: NUMBER
+    unique: false
+  - name: COUNTRYID
+    synonyms:
+    - COUNTRYID
+    - Countryid
+    description: ''
+    expr: COUNTRYID
+    data_type: NUMBER
+    unique: false
+  - name: MONTHID
+    synonyms:
+    - MONTHID
+    - Monthid
+    description: ''
+    expr: MONTHID
+    data_type: VARCHAR
+    unique: false
+  - name: AMOUNT
+    synonyms:
+    - AMOUNT
+    - Amount
+    description: ''
+    expr: AMOUNT
+    data_type: NUMBER
+    unique: false
